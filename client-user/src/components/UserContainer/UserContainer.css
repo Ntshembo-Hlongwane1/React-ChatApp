@@ -1,0 +1,47 @@
+.textContainer {
+  /* display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  color: white;
+  height: 60%;
+  justify-content: space-between; */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border-radius: 8px;
+  height: 70%;
+  width: 30%;
+  margin-left: 50px; */
+}
+
+.user-container{
+  color: #eee;
+  padding-left: 5%;
+}
+
+.activeContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50%;
+  font-size: 1.2rem;
+}
+
+.activeItem {
+  display: flex;
+  align-items: center;
+}
+
+.activeContainer img {
+  padding-left: 10px;
+}
+
+.textContainer h1 {
+  margin-bottom: 0px;
+}
+
+@media (min-width: 320px) and (max-width: 1200px) {
+  .textContainer {
+    display: none;
+  }
+}

@@ -1,0 +1,121 @@
+.outerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1A1A1D;
+}
+
+.outer{
+  display: flex;
+  justify-content: center;
+  background-color: #1A1A1D;
+  padding-top: 1%;
+  height:100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border-radius: 8px;
+  height: 70%;
+  width: 50%;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .outerContainer {
+    height: 100%;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1200px) {
+  .container {
+    width: 60%;
+  }
+}
+
+.chat-container{
+  display: grid;
+  grid:
+      'search-container chat-title' 71px
+      'conversation-list chat-message-list' 1fr
+      'new-message-container chat-form' 78px
+      / 275px 1fr;
+  min-width: 800px;
+  max-width: 1000px;
+  max-height: 800px;
+  width: 100%;
+  height: 95vh;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.search-container, .conversation-list, .new-message-container{
+  background-color: #0048AA;
+}
+
+.search-container{
+  display: grid;
+  align-items: center;
+  padding: 0 20px;
+  grid-area: search-container;
+  border-radius:10px 0 0 0;
+  box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
+  z-index: 1;
+}
+
+.search-container{
+  align-items: center;
+  align-content: center;
+  color: #eee;
+  outline: none;
+  border-radius: 2px;
+  border: 0;
+  padding-left: 60px;
+  padding-right: 20px;
+}
+
+.conversation-list{
+  grid-area: conversation-list;
+}
+
+.new-message-container{
+  border-top: 1px solid rgba(0,0,0,0.25);
+  border-radius:0 0 0 10px;
+}
+
+.chat-title, .chat-form{
+  background-color: #eee;
+}
+
+.chat-title{
+  display: grid;
+  grid: 36px / 1fr 36px;
+  align-content: center;
+  align-items: center;
+  grid-area: chat-title;
+  color: #0048AA;
+  font-weight: bold;
+  font-size: 0.2rem;
+  border-radius: 0 10px 0 0;
+  box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
+  padding: 0 20px;
+}
+
+.chat-message-list{
+  grid-area: chat-message-list;
+}
+
+.chat-form{
+  grid-area:chat-form;
+  border-radius: 0 0 10px 0;
+  border-top: 1px solid rgba(0,0,0,0.25);
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+}
