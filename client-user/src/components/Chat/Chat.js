@@ -8,6 +8,8 @@ import Input from '../Input/Input';
 import Messages from '../Messages/Messages';
 import UserContainer from '../UserContainer/UserContainer';
 
+import ScrollToBottom from 'react-scroll-to-bottom';
+
 
 let socket;
 
@@ -64,16 +66,14 @@ const Chat = ({location}) => {
     }
   }
 
-  console.log(message,messages);
-
   return (
     <div>
-    
+
 
     <div className="outer">
     <div className="chat-container">
       <div className="search-container">
-        <h1>ChatGram</h1>
+        <h1><img className="logo" src="https://image.flaticon.com/icons/svg/2950/2950581.svg" alt="logo"/>ChatGram</h1>
       </div>
 
       <div className="conversation-list">
@@ -88,9 +88,9 @@ const Chat = ({location}) => {
         <InfoBar room={room} />
       </div>
 
-      <div className="chat-message-list">
+      <ScrollToBottom className="chat-message-list">
         <Messages messages={messages} name={name} />
-      </div>
+      </ScrollToBottom>
 
       <div className="chat-form">
         <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>

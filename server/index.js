@@ -11,6 +11,7 @@ const router = require('./router');
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
+const cors = require('cors');
 
 io.on('connection', (socket)=>{
   socket.on('join',({name, room},callback)=>{
@@ -28,7 +29,6 @@ io.on('connection', (socket)=>{
     //message to all the users of that room except the newly joined user
     socket.broadcast.to(user.room).emit('message',{user:'admin',text:`${user.name} has joined`});
 
-    socket.join(user.room);
 
     io.to(user.room).emit('roomData',{room:user.room, users:getUsersOfRoom(user.room)})
 
@@ -53,6 +53,7 @@ io.on('connection', (socket)=>{
 })
 
 app.use(router);
+app.use(cors());
 
 server.listen(PORT, ()=>{
   console.log(`Server Started on PORT ${PORT}`)

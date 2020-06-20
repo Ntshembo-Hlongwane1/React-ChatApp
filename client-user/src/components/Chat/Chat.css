@@ -78,7 +78,7 @@
   outline: none;
   border-radius: 2px;
   border: 0;
-  padding-left: 60px;
+  padding-left: 40px;
   padding-right: 20px;
 }
 
@@ -111,6 +111,7 @@
 
 .chat-message-list{
   grid-area: chat-message-list;
+  overflow-y:hidden;
 }
 
 .chat-form{
@@ -118,4 +119,9 @@
   border-radius: 0 0 10px 0;
   border-top: 1px solid rgba(0,0,0,0.25);
   border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+
+.logo{
+  width: 18%;
+  padding-right: 4%;
 }

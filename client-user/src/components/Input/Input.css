@@ -20,10 +20,16 @@ input:focus, textarea:focus, select:focus{
   text-transform: uppercase;
   text-decoration: none;
   background: #2979FF;
-  padding: 32px;
+
   display: inline-block;
   border: none;
   width: 20%;
   height: 77px;
-  border-bottom-right-radius: 8px; 
+  border-bottom-right-radius: 8px;
+  font-size: 1.0rem;
+}
+
+.send-icon{
+  width: 15%;
+  padding-left: 5%;
 }

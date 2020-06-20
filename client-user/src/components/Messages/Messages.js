@@ -5,9 +5,9 @@ import Message from '../Message/Message';
 import './Messages.css';
 
 const Messages = ({ messages, name }) => (
-  <div className="messages">
+    <div className="messages">
     {messages.map((message, i) => <div key={i}><Message message={message} name={name}/></div>)}
-  </div>
+    </div>
 );
 
 export default Messages;
