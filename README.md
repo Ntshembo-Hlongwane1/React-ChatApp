@@ -2,7 +2,7 @@
 
 This is a realtime chatting application developed using React.js, Node.js & Socket.io. ChatGram is dedicated to group messaging. Users can share text-based messages and emojis with their Friends who are in the same room.
 
-## [Link](https://chatgramapp.netlify.app/)
+### Link - https://chatgramapp.netlify.app/
 
 ## 🏁 Technology Stack
 
